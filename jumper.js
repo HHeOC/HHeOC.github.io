@@ -11,7 +11,7 @@ function jumper(){
         this.velocity = 0;
         this.show = function(){
           fill(color('red'));
-          ellipse(this.x,this.y,50,50);
+          rect(this.x,this.y,50,50);
         }
         this.up = function(){
          this.velocity += this.lift;//jumping function
@@ -20,8 +20,9 @@ function jumper(){
           this.velocity += this.gravity; //gravity applied when not jumping
           this.y += this.velocity;
           this.velocity *= 0.985; // air resistance
-          if(this.y > h){
-            this.y = h;
+          if(this.y > h-50){
+            this.y = h-50;
+            this.y -=20
             this.velocity = 0;
         }
           if(this.y < 0){

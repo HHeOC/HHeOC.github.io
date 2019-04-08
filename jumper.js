@@ -2,6 +2,7 @@ var w = window.innerWidth;
 var h = window.innerHeight;
 var jumper = new jumper();
 var d;
+var mc;
       
 function jumper(){
         this.x = 50;

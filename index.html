@@ -42,6 +42,7 @@
       var bg;
       var mc;
       var en;
+      var re;
       function gameover(){
         location.reload();
       }
@@ -49,7 +50,8 @@
       function setup(){
         bg = loadImage('ejl2wh.jpg');
         mc = loadImage('character.jpg');
-        en = loadImage('enemy.png')
+        en = loadImage('enemy.png');
+        re = loadImage('rest.jpg');
         createCanvas(w,h);
       }
       function draw(){
@@ -61,7 +63,7 @@
         barrier.update();
         restplace.show();
 	   barrierhit = collideRectRect(barrier.x + 120,barrier.y + 11, 120, barrier.yrad,jumper.x,jumper.y,50,50);
-	   resthit = collideRectRect(restplace.x - 100,restplace.y-60,100,100,jumper.x,jumper.y,50,50);
+	   resthit = collideRectRect(restplace.x - 100,restplace.y-90,100,100,jumper.x,jumper.y,50,50);
 	    if(barrierhit == true){
 	      noLoop();
 	      document.getElementById('over').innerHTML = "GAME OVER";

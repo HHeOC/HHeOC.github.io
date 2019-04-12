@@ -21,7 +21,7 @@ function barrier(){
              miss ++;
             this.x = w+100;
             this.y = Math.floor(Math.random()*h);
-            this.yrad = Math.floor((Math.random()*300 + 50));
+            this.yrad = Math.floor((Math.random()*300) + 50);
 	        document.getElementById('score').innerHTML = "Score: " + miss;
           }
 

@@ -11,7 +11,7 @@ function jumper(){
         this.lift = -10;
         this.velocity = 0;
         this.show = function(){
-          image(mc,this.x,this.y,50,50);
+          image(mc,this.x,this.y,70,70);
         }
         this.up = function(){
          this.velocity += this.lift;//jumping function

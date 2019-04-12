@@ -63,7 +63,7 @@
         barrier.update();
         restplace.show();
 	   barrierhit = collideRectRect(barrier.x + 130,barrier.y, 120, barrier.yrad,jumper.x,jumper.y,50,50);
-	   resthit = collideRectRect(restplace.x - 100,restplace.y-70,100,100,jumper.x,jumper.y,50,50);
+	   resthit = collideRectRect(restplace.x - 100,restplace.y-110,100,100,jumper.x,jumper.y,50,50);
 	    if(barrierhit == true){
 	      noLoop();
 	      document.getElementById('over').innerHTML = "GAME OVER";

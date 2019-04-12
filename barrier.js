@@ -6,7 +6,7 @@ var en;
 function barrier(){
         this.x = w;
         this.y = Math.floor(Math.random()*h);
-        this.yrad = Math.floor(Math.random()*300);
+        this.yrad = Math.floor(Math.random(50,300));
         this.gravity = 20;
         this.velocity = 0;
         this.show = function(){
@@ -21,7 +21,7 @@ function barrier(){
              miss ++;
             this.x = w+100;
             this.y = Math.floor(Math.random()*h);
-            this.yrad = Math.floor(Math.random()*300);
+            this.yrad = Math.floor(Math.random(50,300));
 	        document.getElementById('score').innerHTML = "Score: " + miss;
           }
 

@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+  </head>
+  <body>
+    <script>
+    var img;
+      function setup(){
+        createCanvas(window.innerWidth,window.innerHeight, WEBGL)
+        img = load("Daimond.png")
+      }
+      function draw(){
+        background(255);
+        var locX = mouseX - width/2;
+        var locY = mouseY - height/2;
+        // directionalLight(r,g,b,x,y,z);
+        directionalLight(99,102,222,-locX,-locY,-123);
+        specularMaterial(255); //give it shining
+        noStroke();
+        rotateX(mouseY/400);
+        rotateY(mouseX/400);
+        texture(img);
+        box(200);
+      }
+    </script>
+  </body>
+</html>

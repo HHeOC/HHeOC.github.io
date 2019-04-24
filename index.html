@@ -19,8 +19,8 @@
         directionalLight(99,102,222,-locX,-locY,-123);
         specularMaterial(255); //give it shining
         noStroke();
-        rotateX(mouseY/400);
-        rotateY(mouseX/400);
+        rotateX(framecount * 0.01);
+        rotateY(framecount * 0.02);
         texture(img);
         box(200);
       }

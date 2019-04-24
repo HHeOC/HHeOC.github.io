@@ -5,9 +5,11 @@
   <body>
     <script>
     var img;
+         function preload(){
+      img = load("Daimond.png")
+    }
       function setup(){
         createCanvas(window.innerWidth,window.innerHeight, WEBGL)
-        img = load("Daimond.png")
       }
       function draw(){
         background(255);

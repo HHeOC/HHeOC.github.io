@@ -1,28 +1,21 @@
 <html>
   <head>
     <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
   </head>
   <body>
     <script>
-    var img;
-         function preload(){
-      img = loadImage("dtext.jpg")
-    }
+      var capture;
       function setup(){
-        createCanvas(window.innerWidth,window.innerHeight, WEBGL)
+        createCanvas(window.innerWidth,window.innerHeight);
+        capture = createCapture(VIDEO);
+        capture.size(0,0);
       }
+      
       function draw(){
-        background(255);
-        var locX = mouseX - width/2;
-        var locY = mouseY - height/2;
-        // directionalLight(r,g,b,x,y,z);
-        directionalLight(99,102,222,-locX,-locY,-123);
-        specularMaterial(255); //give it shining
-        noStroke();
-        rotateX(frameCount * 0.01);
-        rotateY(frameCount * 0.02);
-        texture(img);
-        torus(200,64,100,100);
+        background(0);
+        tint(200,0,0);
+        image(capture,0,0,720,400);
       }
     </script>
   </body>

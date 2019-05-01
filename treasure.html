@@ -8,7 +8,7 @@
     <script src="p5.geolocation.js"></script>
   </head>
   <body>
-    <p id="srart"></p>
+    <p id="SHOW"></p>
     <p id="distance"></p>
     <script>
     var distance;
@@ -19,10 +19,10 @@
 
         function setup() {
             if (geoCheck() == true) {
-                document.getElementById('start').innerHTML = "Ready";
+                document.getElementById('SHOW').innerHTML = "Ready";
                 
             } else {
-                document.getElementById('start').innerHTML = "Enable GPS";
+                document.getElementById('SHOW').innerHTML = "Enable GPS";
             }
             intervalCurrentPosition(positionPing,1000);
             enableHighAccuracy: true;
@@ -34,10 +34,10 @@
             distance = calcGeoDistance(xlat,ylon,treasurelat,treasurelon,'mi');
             document.getElementById('distance').innerHTML = distance.toFixed(5);
             if (distance < 0.001) {
-                document.getElementById('locAvail').innerHTML = "YOU FOUND THE TREASURE!";
+                document.getElementById('SHOW').innerHTML = "YOU GOT NOTHING!";
             }
             else {
-                document.getElementById('locAvail').innerHTML = "";
+                document.getElementById('SHOW').innerHTML = "";
             }
         }\
         </script>

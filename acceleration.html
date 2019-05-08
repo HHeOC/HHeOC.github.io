@@ -2,14 +2,6 @@
   <head>
     <script src = "p5.min.js"></script>
     <style>
-     #accelX{
-        font-size:60;
-        position:fixed;
-      }
-      #accelY{
-        font-size:60;
-
-      }
     
     </style>
   </head>
@@ -35,8 +27,8 @@
        if(ay > yHigh){
          yHigh = ay;
          }
-      document.getElementById('accelX').innerHTML = "Highest X-acceleration: " + xHigh;
-       document.getElementById('accelY').innerHTML = "Highest Y-acceleration: " + yHigh;
+      document.getElementById('accelX').innerHTML = "Highest X-acceleration: " + xHigh.toFixed(2);
+       document.getElementById('accelY').innerHTML = "Highest Y-acceleration: " + yHigh.toFixed(2);
       }
       function deviceMoved() {
         var rr = Math.floor(Math.random() * 255);

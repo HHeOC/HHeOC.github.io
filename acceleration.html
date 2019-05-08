@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script src = "p5.min.js"></script>
+    <style>
+   /*   #accelX{
+        font-size:60;
+        color:red;
+        position:fixed;
+      }
+      #accelY{
+        font-size:60;
+        color:blue;
+
+      }
+    */
+    </style>
+  </head>
+  <body>
+    <h1 id="accelX"></h1>
+    <h1 id="accelY"></h1>
+    <script>
+      var ax;
+      var ay;
+     var xHigh = 0;
+     var yHigh = 0;
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      function setup(){
+        createCanvas(w,h);
+      }
+      function draw(){
+        ax = accelerationX;
+        ay = accelerationY;
+       if(ax > xHigh){
+         ax = Xhigh;
+         
+       }
+       if(ay > yHigh){
+         ay = yHigh;
+       }
+       document.getElementById('accelX').innerHTML = "X-acceleration: " + xHigh;
+       document.getElementById('accelY').innerHTML = "Y-acceleration: " + yHigh;
+      /*  ay = accelerationY;
+        document.getElementById('accelY').innerHTML = ay;
+        */
+      }
+    </script>
+  </body>
+</html>

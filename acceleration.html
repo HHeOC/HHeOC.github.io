@@ -32,11 +32,11 @@
         ax = accelerationX;
         ay = accelerationY;
        if(ax > xHigh){
-         ax = Xhigh;
+         xHigh = ax;
          
        }
        if(ay > yHigh){
-         ay = yHigh;
+         yHigh = ay;
        }
        document.getElementById('accelX').innerHTML = "X-acceleration: " + xHigh;
        document.getElementById('accelY').innerHTML = "Y-acceleration: " + yHigh;

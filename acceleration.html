@@ -37,8 +37,9 @@
        if(ay > yHigh){
          yHigh = ay;
          }
-      document.getElementById('accelX').innerHTML = "Highest X-acceleration: " + ax;
-       document.getElementById('accelY').innerHTML = "Highest Y-acceleration: " + ay;
+      document.getElementById('accelX').innerHTML = "Highest X-acceleration: " + xHigh;
+       document.getElementById('accelY').innerHTML = "Highest Y-acceleration: " + yHigh;
+      }
       function deviceMoved() {
         var rr = Math.floor(Math.random() * 255);
         var rg = Math.floor(Math.random() * 255);

@@ -31,14 +31,14 @@
       function draw(){
         ax = accelerationX;
         ay = accelerationY;
-       if(ax > xHigh){
+       if(ax < xHigh){
          xHigh = ax;
          document.body.style.backgroundColor = "red";
        }
        if(ax = xHigh){
          document.body.style.backgroundColor = "white";
        }
-       if(ay > yHigh){
+       if(ay < yHigh){
          yHigh = ay;
          document.body.style.backgroundColor = "red";
        }

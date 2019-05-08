@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+  </head>
+  <body>
+    <h1 id="rx"></h1>
+    <h1 id="px"></h1>
+    <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    function setup(){
+      createCanvas(w,h);
+    }
+      function draw(){
+        rx = rotationX.tofixed(1);
+        if(rx > prevX){
+          prevx = rx;
+        }
+        if(((prevX+15) || (prevx + 10)) 1 = rx){
+          document.body.style.backgroundColor = "red";
+        }
+        else{
+          document.body.style.backgroundColor = "white";
+        }
+        document.getElementById('rx').innerHTML ="X rotation " + rx;
+        document.getElementById('px').innerHTML = prevx;
+      }
+    </script>
+  </body>
+</html>

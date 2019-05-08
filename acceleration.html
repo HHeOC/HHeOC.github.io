@@ -31,25 +31,20 @@
       function draw(){
         ax = accelerationX;
         ay = accelerationY;
-       if(ax < xHigh){
+       if(ax > xHigh){
          xHigh = ax;
-         document.body.style.backgroundColor = "red";
        }
-       if(ax = xHigh){
-         document.body.style.backgroundColor = "white";
-       }
-       if(ay < yHigh){
+       if(ay > yHigh){
          yHigh = ay;
-         document.body.style.backgroundColor = "red";
-       }
-       if(ay = yHigh){
-         document.body.style.backgroundColor = "white";
-       }
-      document.getElementById('accelX').innerHTML = "X-acceleration: " + ax;
-       document.getElementById('accelY').innerHTML = "Y-acceleration: " + ay;
-      /*  ay = accelerationY;
-        document.getElementById('accelY').innerHTML = ay;
-        */
+         }
+      document.getElementById('accelX').innerHTML = "Highest X-acceleration: " + ax;
+       document.getElementById('accelY').innerHTML = "Highest Y-acceleration: " + ay;
+      function deviceMoved() {
+        var rr = Math.floor(Math.random() * 255);
+        var rg = Math.floor(Math.random() * 255);
+        var rb = Math.floor(Math.random() * 255);
+        background(rr, rg, rb);
+      }
       }
     </script>
   </body>

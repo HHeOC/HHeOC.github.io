@@ -33,17 +33,17 @@
         ay = accelerationY;
        if(ax > xHigh){
          xHigh = ax;
-        document.style.backgroundColor = "red";
+        document.body.style.backgroundColor = "red";
        }
        if(ax = xHigh){
-         document.style.backgroundColor = "white";
+         document.body.style.backgroundColor = "white";
        }
        if(ay > yHigh){
          yHigh = ay;
-         document.style.backgroundColor = "green";
+         document.body.style.backgroundColor = "green";
        }
        if(ay = yHigh){
-         document.style.backgroundColor = "white";
+         document.body.style.backgroundColor = "white";
        }
       document.getElementById('accelX').innerHTML = "X-acceleration: " + ax;
        document.getElementById('accelY').innerHTML = "Y-acceleration: " + ay;
